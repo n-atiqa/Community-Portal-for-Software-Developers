@@ -61,10 +61,10 @@ INSERT INTO `tb_feedback` (`id`, `firstname`, `lastname`, `email`, `comments`) V
 (3, 'efefd', 'efrfr4f', 'wong@hotmail.com', 'efervrv'),
 (4, 'wong', 'lee', 'ww@hotmail.com', 'complain about ...'),
 (6, 'wong', 'lee', 'ww@hotmail.com', 'complain about ...'),
-(7, 'Atiqa', 'Azhar', 'nuratiqa.93@gmail.com', 'Feedback'),
+(7, 'Atiqa', 'Azhar', 'shirokuma.93@gmail.com', 'Feedback'),
 (8, '', '', '', ''),
-(9, 'Atiqa', 'Azhar', 'nuratiqa.93@gmail.com', 'feedback'),
-(10, 'Atiqa', 'Azhar', 'atiqa_atiqa0219@hotmail.com', 'test'),
+(9, 'Atiqa', 'Azhar', 'shirokuma.93@gmail.com', 'feedback'),
+(10, 'Atiqa', 'Azhar', 'shirokuma0219@hotmail.com', 'test'),
 (11, '', '', '', ''),
 (12, 'John', 'Smith', 'johnsmith@website', 'Account deactivated'),
 (13, 'Mary', 'Jane', 'maryjane@website.com', ''),
@@ -123,8 +123,8 @@ CREATE TABLE IF NOT EXISTS `tb_jobapply` (
 --
 
 INSERT INTO `tb_jobapply` (`jobapply_id`, `firstname`, `lastname`, `email`, `message`, `job_id`) VALUES
-(1, 'Atiqa', 'Azhar', 'atiqa_atiqa0219@hotmail.com', 'Test', 3),
-(2, 'Atiqa', 'Azhar', 'atiqa_atiqa0219@hotmail.com', 'ygygiuh', 2),
+(1, 'Atiqa', 'Azhar', 'shirokuma0219@hotmail.com', 'Test', 3),
+(2, 'Atiqa', 'Azhar', 'shirokuma0219@hotmail.com', 'ygygiuh', 2),
 (3, 'John', 'Scott', 'lucido@email.com', 'Applying', 4),
 (4, 'Mary', 'jane', 'maryjane@website.com', 'Hello. I am interested in applying for the job at Google. Do contact me ', 2),
 (5, 'Sam', 'Smith', 'samsmith@website.com', 'I am interested', 2),
@@ -289,9 +289,9 @@ CREATE TABLE IF NOT EXISTS `tb_user` (
 INSERT INTO `tb_user` (`id`, `firstname`, `lastname`, `email`, `companyname`, `city`, `country`, `password`, `account_creation_time`, `role`, `account`) VALUES
 (3, 'Walter', 'wong03', 'wong@hotmail.com', 'Mymm', 'Nanaimo', 'Canada', 'Password01', '2017-12-25 14:30:08', 'admin', 'deactivate'),
 (4, 'Philip', 'kok', 'philip@hotmail.com', 'Vinder', 'Atins', 'Brazil', 'Password01', '2018-01-04 17:23:50', 'user', 'active'),
-(6, 'Atiqa', 'Azhar', 'atiqa_atiqa0219@hotmail.com', 'Novocall', 'Singapore', 'Singapore', '$2y$10$ojy.H.edxp8U1nXH6kvpVuguaa9ApYnyMm7QyPQhJfKFRgg3/Lv/C', '2018-01-05 12:50:28', 'admin', 'active'),
+(6, 'Atiqa', 'Azhar', 'shirokuma0219@hotmail.com', 'Novocall', 'Singapore', 'Singapore', '$2y$10$ojy.H.edxp8U1nXH6kvpVuguaa9ApYnyMm7QyPQhJfKFRgg3/Lv/C', '2018-01-05 12:50:28', 'admin', 'active'),
 (7, 'Taemin', 'Park', 'testing@website.com', 'Meezzy', 'Cijengkol', 'Indonesia', 'Vg4wp8EP', '2018-01-06 00:58:13', 'user', 'active'),
-(12, 'Eqa', 'Azhar', 'nuratiqa.93@gmail.com', 'Paper company', 'Hamilton', 'New Zealand', '$2y$10$REgxv5yDpNVi6dWfqrfMyuxapnMiK00U2MykWOEbQ0vQH9bItO5fu', '2018-01-06 03:56:27', 'user', 'active'),
+(12, 'Eqa', 'Azhar', 'shirokuma.93@gmail.com', 'Paper company', 'Hamilton', 'New Zealand', '$2y$10$REgxv5yDpNVi6dWfqrfMyuxapnMiK00U2MykWOEbQ0vQH9bItO5fu', '2018-01-06 03:56:27', 'user', 'active'),
 (20, 'Scott', 'White', 'scottwhite@website.com', 'web', 'Random8', 'Denmark', '$2y$10$FhjusXS4wbmSN0z/q3jwJeU5qO4Mp0H9.KT.QVbfGuEuuT8BcN5wW', '2018-01-07 06:36:52', 'user', 'active'),
 (22, 'Toby', 'Moby', 'moby@website.com', 'Mobster', 'New York', 'America', '$2y$10$wAsizNn/GLLhU1iT2eiLEeGRjXmdI79nRWrPQugdXnEumIZ1tdAba', '2018-01-11 13:29:17', 'user', 'active'),
 (23, 'Luke', 'Skywalker', 'star@wars.com', 'Disney', 'Alabama', 'USA', '$2y$10$P2iyLnqEvPNFEpkDaoRTOu8/WyoEZeB5EzfznSKm6w3vUY8uHIdze', '2018-01-13 08:10:16', 'user', 'active'),
