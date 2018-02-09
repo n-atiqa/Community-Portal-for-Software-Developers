@@ -257,24 +257,7 @@ class ForumManagerDB
         $conn->close();
         return $forums;
     }
-	
-
-	
-	/*    public static function viewAccount($id){
-        $conn=DBUtil::getConnection();
-        $sql="SELECT from tb_user WHERE id='$id';";
-        $result = $conn->query($sql);
-		if ($conn->query($sql) === TRUE) {
-			echo "User Profile";
-		} else {
-			echo "Error viewing record: " . $conn->error;
-		}
-		$conn->close();
-
-    }*/
-	
-	
-	
+		
 }
 
 ?>
