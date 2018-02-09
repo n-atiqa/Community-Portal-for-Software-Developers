@@ -4,8 +4,9 @@ A PHP Community Portal project
 Two different users: Admin and Registered User
 
 Features:
+
 -Update profile 
--Password hashed
+-Hashed passwords
 -Request for new password
 -Private Messaging
 -Forums
@@ -13,11 +14,13 @@ Features:
 -Submit Feedback page
 
 Features in Admin site:
+
 -Edit user's account state [active/deactivate]
 -Edit user's role [Admin/user]
 -Delete users and admin
 
 phpcrudsample.sql [8 tables]
+
 -tb_feedback (feedback submitted)
 -tb_job (job postings made in the forum)
 -tb_jobapply (applications sent to a job posting)
