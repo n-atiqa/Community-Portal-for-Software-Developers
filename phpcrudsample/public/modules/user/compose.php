@@ -39,7 +39,6 @@ $validate1=new Validation();
 	
 		if(isset($_POST["submitted"])){ 
 		
-		$to_id=strip_tags($_POST["to_id"]);
 		$subject=strip_tags($_POST["subject"]);
 		$content=strip_tags($_POST["content"]);
 
@@ -49,26 +48,30 @@ $validate1=new Validation();
 		
 
 		if($error_fname == "" && $error_lname == ""){
-		
+
+			foreach($_POST['to_id'] as $to_id){
 				if($_SESSION["id"] !== $to_id){ 
-			$message=new Message();
-			$message->from_id=$_SESSION["id"];		
-			$message->to_id=$to_id;
-			$message->subject=$subject;
-			$message->content=$content;
-			date_default_timezone_set('Singapore');
-			$timestamp = date("Y-m-d H:i:s");
-			$message->time_sent=$timestamp;
-			$MM=new MessageManager();
-			$MM->insertMessage($message);
-			//print_r($message);
-		
-			$success="Message Successfully Sent!";
-		// header("Location:../../modules/user/jobopp.php");
-    }else{ 
-      $formerror="You can't send a message to yourself";
-	  
-     }
+					$message=new Message();
+					$message->from_id=$_SESSION["id"];		
+					$message->to_id=$to_id;
+					$message->subject=$subject;
+					$message->content=$content;
+					date_default_timezone_set('Singapore');
+					$timestamp = date("Y-m-d H:i:s");
+					$message->time_sent=$timestamp;
+					$MM=new MessageManager();
+					$MM->insertMessage($message);
+					//print_r($message);
+				
+					$success="Message Successfully Sent!";
+				// header("Location:../../modules/user/jobopp.php");
+			}else{ 
+			  $formerror="You can't send a message to yourself";
+			  
+			 }
+			}
+			
+
 		}
 		}
 		
@@ -122,26 +125,23 @@ if(isset($users)){
             <div class="form-group">
         <label class="control-label col-sm-1" for="to">To</label>
       <div class="col-sm-11">
-        <select name="to_id">
-	<option value="">Select...</option>
-  		<?php 
+
+	    		<?php 
 
 		foreach ($users as $user) {
 			if($user!=null){
 				if($user->id !== $_SESSION["id"]) {
 				?>
-
-	<option value="<?=$user->id?><?=$user->firstName?>"> <?php echo $user->firstName;?></option>
-	  <?php 
+	 <input type="checkbox" name="to_id[]" value="<?=$user->id?>"> <?php echo $user->firstName;?></input> 
+	 <?php 
 			}
 			}
 		}
 		?>
-	</select></td></tr>
-
-  <?php 
+	    <?php 
 	}
 ?>
+
       </div>
             </div>
             <div class="form-group">
